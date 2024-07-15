@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <style>
+    #login-form {
+      text-align: center;
+    }
+
+    #login-form h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #000000;
+    }
+
+    #loginForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #loginForm div {
+      margin-bottom: 15px;
+    }
+
+    #loginForm label {
+      display: block;
+      margin-bottom: 5px;
+      color: #000000;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #loginForm input[type="text"],
+    #loginForm input[type="password"] {
+      width: 250px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    #loginForm button {
+      width: 100%;
+      padding: 10px;
+      background-color: #482666;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #loginForm button:hover {
+      background-color: #5c378e;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HelgaGraphiCode .my.id</h1>
+    <div id="login-form">
+      <form id="loginForm">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
