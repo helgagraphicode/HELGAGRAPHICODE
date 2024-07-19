@@ -164,20 +164,17 @@ button:hover {
 .safe {
     color: #36a851; /* Warna hijau untuk aman */
     font-weight: bold; /* Teks tebal untuk penekanan */
-    text-shadow: 1px 1px 0 #8e2a7a, -1px -1px 0 #8e2a7a, 1px -1px 0 #8e2a7a, -1px 1px 0 #8e2a7a; /* Outline ungu */
 }
 
 /* Gaya untuk hasil bahaya */
 .danger {
     color: #bb3643; /* Warna merah untuk bahaya */
     font-weight: bold; /* Teks tebal untuk penekanan */
-    text-shadow: 1px 1px 0 #8e2a7a, -1px -1px 0 #8e2a7a, 1px -1px 0 #8e2a7a, -1px 1px 0 #8e2a7a; /* Outline ungu */
 }
 
 /* Gaya untuk hasil error */
 .error {
     color: #cfe224; /* Warna kuning untuk error */
-    text-shadow: 1px 1px 0 #8e2a7a, -1px -1px 0 #8e2a7a, 1px -1px 0 #8e2a7a, -1px 1px 0 #8e2a7a; /* Outline ungu */
 }
 
 /* Gaya untuk deskripsi link */
