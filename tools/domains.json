@@ -1,0 +1,59 @@
+{
+    "Domain Resmi Indonesia": {
+      ".id": {
+        "description": "Domain tingkat atas untuk semua jenis situs web di Indonesia.",
+        "example": "https://example.id"
+      },
+      ".ac.id": {
+        "description": "Domain untuk institusi akademik, seperti universitas dan perguruan tinggi.",
+        "example": "https://universitas.ac.id"
+      },
+      ".sch.id": {
+        "description": "Domain untuk sekolah.",
+        "example": "https://sekolah.sch.id"
+      },
+      ".co.id": {
+        "description": "Domain untuk perusahaan atau organisasi komersial.",
+        "example": "https://perusahaan.co.id"
+      },
+      ".web.id": {
+        "description": "Domain untuk situs web pribadi atau blog.",
+        "example": "https://blog.web.id"
+      },
+      ".or.id": {
+        "description": "Domain untuk organisasi nirlaba atau yayasan.",
+        "example": "https://yayasan.or.id"
+      },
+      ".my.id": {
+        "description": "Domain untuk penggunaan pribadi.",
+        "example": "https://nama.my.id"
+      },
+      ".ponpes.id": {
+        "description": "Domain untuk pondok pesantren.",
+        "example": "https://pondok.ponpes.id"
+      },
+      ".biz.id": {
+        "description": "Domain untuk usaha kecil dan menengah.",
+        "example": "https://ukm.biz.id"
+      },
+      ".go.id": {
+        "description": "Domain untuk instansi pemerintahan.",
+        "example": "https://kementerian.go.id"
+      }
+    },
+    "Domain Perbankan Indonesia": {
+      "bca.co.id": "https://www.bca.co.id",
+      "bri.co.id": "https://bri.co.id",
+      "bni.co.id": "https://bni.co.id",
+      "mandiri.co.id": "https://bankmandiri.co.id",
+      "cimbniaga.co.id": "https://www.cimbniaga.co.id"
+    },
+    "Domain E-Wallet Indonesia": {
+      "dana.id": "https://dana.id",
+      "ovo.id": "https://www.ovo.id",
+      "gopay.co.id": "https://gopay.co.id",
+      "shopeepay.co.id": "https://shopeepay.co.id",
+      "linkaja.id": "https://www.linkaja.id"
+    }
+  }
+  

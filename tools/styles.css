@@ -1,0 +1,223 @@
+/* Reset margin dan padding untuk memastikan konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Pastikan tinggi HTML dan body 100% dari viewport */
+    margin: 0; /* Menghilangkan margin default pada body */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Warna latar belakang netral */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Tinggi minimum 100% dari viewport */
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #482666;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-shrink: 0; /* Header tidak mengambil ruang saat scroll */
+    width: 100%; /* Agar header menempati lebar penuh */
+    box-sizing: border-box; /* Memastikan padding termasuk dalam lebar */
+}
+
+/* Gaya untuk logo */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+/* Gaya untuk navigasi */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Jarak antar item menu */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya untuk container agar form berada di tengah dan dalam box */
+.container {
+    background-color: #fff; /* Warna latar belakang box putih */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk efek kedalaman */
+    padding: 20px; /* Jarak di dalam box */
+    max-width: 600px; /* Lebar maksimal box */
+    width: 100%; /* Agar box responsif */
+    text-align: center; /* Teks di dalam box diatur rata tengah */
+    margin: 20px auto; /* Agar box memiliki jarak vertikal dari elemen lain dan berada di tengah secara horizontal */
+}
+
+.container .logo-image {
+    width: 200px; /* Lebar logo */
+    height: 200px; /* Tinggi logo */
+    object-fit: contain; /* Menjaga rasio aspek gambar */
+    display: block; /* Menghindari jarak bawah di gambar */
+    margin: 0 auto; /* Memusatkan gambar secara horizontal */
+}
+
+/* Gaya untuk h1 di dalam header */
+header h1 {
+    font-size: 24px; /* Ukuran font untuk h1 di dalam header */
+    color: #fff; /* Warna putih untuk h1 di dalam header */
+    margin: 0; /* Menghilangkan margin untuk header h1 */
+}
+
+/* Gaya untuk judul utama */
+.container h1 {
+    font-size: 24px; /* Ukuran font untuk judul utama */
+    color: #482666; /* Warna ungu untuk judul utama */
+    margin-bottom: 20px; /* Jarak bawah judul utama */
+}
+
+/* Gaya untuk form input dan button */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px; /* Lebar maksimal input */
+    padding: 10px;
+    border: 1px solid #ddd; /* Garis batas tipis */
+    border-radius: 4px; /* Sudut melengkung */
+    margin-bottom: 10px; /* Jarak bawah input */
+    font-size: 16px; /* Ukuran font input */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #482666; /* Warna latar belakang button */
+    color: #fff; /* Warna teks button */
+    font-size: 16px; /* Ukuran font button */
+    cursor: pointer; /* Tangan saat hover */
+    transition: background-color 0.3s; /* Transisi untuk efek hover */
+    margin: 5px; /* Jarak antar button */
+}
+
+button:hover {
+    background-color: #371f5a; /* Warna latar belakang button saat hover */
+}
+
+/* Gaya untuk animasi loading */
+.loading {
+    display: none; /* Tersembunyi secara default */
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ddd;
+    border-radius: 50%;
+    border-top: 4px solid #482666; /* Warna untuk efek loading */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Gaya untuk hasil pengecekan */
+.result {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left; /* Untuk penataan teks yang lebih baik */
+}
+
+/* Gaya untuk hasil aman */
+.safe {
+    color: #36a851; /* Warna hijau untuk aman */
+    font-weight: bold; /* Teks tebal untuk penekanan */
+    text-shadow: 1px 1px 0 #8e2a7a, -1px -1px 0 #8e2a7a, 1px -1px 0 #8e2a7a, -1px 1px 0 #8e2a7a; /* Outline ungu */
+}
+
+/* Gaya untuk hasil bahaya */
+.danger {
+    color: #bb3643; /* Warna merah untuk bahaya */
+    font-weight: bold; /* Teks tebal untuk penekanan */
+    text-shadow: 1px 1px 0 #8e2a7a, -1px -1px 0 #8e2a7a, 1px -1px 0 #8e2a7a, -1px 1px 0 #8e2a7a; /* Outline ungu */
+}
+
+/* Gaya untuk hasil error */
+.error {
+    color: #cfe224; /* Warna kuning untuk error */
+    text-shadow: 1px 1px 0 #8e2a7a, -1px -1px 0 #8e2a7a, 1px -1px 0 #8e2a7a, -1px 1px 0 #8e2a7a; /* Outline ungu */
+}
+
+/* Gaya untuk deskripsi link */
+.link-description {
+    font-size: 14px; /* Ukuran font yang lebih kecil untuk deskripsi */
+    margin-top: 10px; /* Jarak atas deskripsi dari hasil */
+    color: inherit; /* Warna mengikuti warna teks induk (.result) */
+    font-weight: bold; /* Teks tebal untuk deskripsi link */
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #482666; /* Warna latar belakang footer */
+    color: #fff; /* Warna teks footer */
+    text-align: center; /* Teks di tengah footer */
+    padding: 10px; /* Jarak di dalam footer */
+    margin-top: auto; /* Agar footer berada di bagian bawah */
+    width: 100%; /* Agar footer menempati lebar penuh */
+    box-sizing: border-box; /* Memastikan padding termasuk dalam lebar */
+}
+
+/* Responsif untuk tampilan desktop */
+@media (min-width: 769px) {
+    header {
+        display: flex; /* Menjaga layout header tetap fleksibel */
+    }
+
+    nav {
+        display: flex; /* Menjaga navigasi tetap horizontal */
+        flex-direction: row; /* Menu navigasi ditampilkan dalam baris */
+        gap: 15px; /* Jarak antar item menu */
+    }
+
+    nav ul {
+        display: flex; /* Menjaga list item tetap horizontal */
+        gap: 15px; /* Jarak antar item menu */
+    }
+
+    .container {
+        margin: 20px auto; /* Jarak vertikal dari elemen lain dan berada di tengah secara horizontal */
+        max-width: 800px; /* Lebar maksimal container lebih besar di desktop */
+    }
+}
