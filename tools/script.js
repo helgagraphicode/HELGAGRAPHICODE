@@ -53,7 +53,7 @@ async function checkLink() {
     const resultDiv = document.getElementById('result');
 
     // Tampilkan animasi loading
-    document.getElementById('loading').style.display = 'block';
+    document.getElementById('loading').style.display = 'flex';
 
     // Validasi input
     if (!linkInput) {

@@ -1,3 +1,13 @@
+/* CSS untuk menghilangkan garis bawah pada judul post */
+.post h2 a {
+    text-decoration: none;
+    color: inherit; /* Menggunakan warna default teks */
+}
+
+.post h2 a:hover {
+    text-decoration: underline; /* Garis bawah muncul saat hover (opsional) */
+}
+
 /* General styles */
 body {
     font-family: Arial, sans-serif;
@@ -11,8 +21,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-
 
 header {
     background-color: #482666;
@@ -49,22 +57,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
 main {
     flex: 1;
     padding: 20px;
@@ -87,7 +79,6 @@ main {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 800px;
 }
@@ -101,17 +92,6 @@ main {
     margin-bottom: 10px;
     text-align: justify;
 }
-
-@media only screen and (max-width: 768px) {
-    main {
-        padding: 10px;
-    }
-
-    .post {
-        padding: 15px;
-    }
-}
-
 
 footer {
     background-color: #482666;
@@ -161,12 +141,11 @@ footer {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-  }
+}
 
-  #post-form input[type="text"],
-  #post-form textarea {
+#post-form input[type="text"],
+#post-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -174,14 +153,14 @@ footer {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-  }
+}
 
-  #post-form textarea {
+#post-form textarea {
     height: 150px;
     resize: vertical;
-  }
+}
 
-  #post-form button {
+#post-form button {
     background-color: #482666;
     color: #fff;
     border: none;
@@ -189,15 +168,108 @@ footer {
     cursor: pointer;
     border-radius: 4px;
     font-size: 16px;
-  }
+}
 
-  #post-form button:hover {
+#post-form button:hover {
     background-color: #5c378e;
-  }
+}
 
-  #posts {
+#posts {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+}
+
+/* Styling untuk pagination */
+.pagination {
+    display: flex;
+    justify-content: center; /* Menyelaraskan tombol ke tengah */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #6c1d8f; /* Warna ungu gelap */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px; /* Jarak antara tombol */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #5c1b7f; /* Warna ungu lebih gelap saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.pagination button:disabled {
+    background-color: #d3a9e2; /* Warna ungu pucat untuk tombol dinonaktifkan */
+    cursor: not-allowed;
+}
+
+/* Styles for the form and its elements */
+#post-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#post-form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#post-form select,
+#post-form input[type="text"],
+#post-form input[type="password"],
+#post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#post-form select:focus,
+#post-form input[type="text"]:focus,
+#post-form input[type="password"]:focus,
+#post-form textarea:focus {
+    border-color: #482666; /* Focus border color */
+    outline: none;
+    box-shadow: 0 0 4px rgba(72, 38, 102, 0.2); /* Focus shadow */
+}
+
+#post-form textarea {
+    height: 150px; /* Set a height for textarea */
+    resize: vertical; /* Allow vertical resize only */
+}
+
+/* Styles for the submit button */
+#post-form button {
+    background-color: #482666; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#post-form button:hover {
+    background-color: #3c1f5c; /* Darker shade of purple for hover */
+}
+
+#post-form button:active {
+    background-color: #3c1f5c; /* Same as hover for active */
+    transform: scale(0.98); /* Slightly scale down on click */
+}

@@ -3,40 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
+    <title>Edit Post</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/suneditor@latest/dist/css/suneditor.min.css">
     <link rel="icon" type="image/png" href="icon.png">
-
 </head>
 <body>
-  <header>
-    <div class="logo">
-        <h1>HelgaGraphiCode</h1>
-    </div>
-    <nav id="main-nav">
-        <ul>
-            <li><a href="home.html">HOME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="account.html">ACCOUNT</a></li>
-        </ul>
-    </nav>
-</header>
-
+    <header>
+        <div class="logo">
+            <h1>HelgaGraphiCode</h1>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="account.html">ACCOUNT</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <form id="post-form">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" placeholder="Title" required>
+            <label for="post-selector">Select Post to Edit:</label>
+            <select id="post-selector">
+                <option value="">Create New Post</option>
+                <!-- Options will be dynamically populated -->
+            </select>
 
-            <div id="suneditor-container"></div>
+            <div id="form-container">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Title" required>
 
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author" placeholder="Author" required>
+                <div id="suneditor-container"></div>
 
-            <button type="submit">Submit</button>
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" placeholder="Author" required>
+
+                <button type="submit" id="submit-button">Save Changes</button>
+            </div>
         </form>
-        <div id="posts"></div>
     </main>
 
     <footer>
@@ -52,7 +57,7 @@
     <!-- Include your Firebase configuration -->
     <script src="../js/firebase-config.js"></script>
 
-    <!-- Include your admin.js script -->
+    <!-- Include your JavaScript file for edit post -->
     <script type="module" src="blog.js"></script>
 </body>
 </html>
