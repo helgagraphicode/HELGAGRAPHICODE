@@ -1,0 +1,461 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memastikan gambar terpusat */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-attachment: fixed; /* Memastikan gambar tidak bergerak saat scroll */
+    background-color: #000000; /* Warna latar belakang jika gambar tidak tersedia */
+    
+}  
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #482666; /* Slightly lighter color */
+    color: white;
+    height: 70px; /* Adjusted height */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.logo {
+    font-weight: bold; /* Make the logo text bold */
+    font-size: 36px; /* Default size for desktop */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 20px; /* Size for mobile devices */
+    }
+}
+
+.menu-icon {
+    font-size: 1.8em;
+    color: #fff; /* Color for menu icon */
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px; /* Adjusted width */
+    background-color: #482666;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px; /* Adjusted padding */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-menu.show {
+    transform: translateX(0);
+}
+
+.close-icon {
+    font-size: 2.2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-menu ul li {
+    margin: 15px 0;
+    width: 100%; /* Ensure full width for centering */
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    display: block; /* Make links block level for full width */
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #482666; /* Hover effect for links */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.nav-menu ul li button {
+    width: 80%;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px;
+    background-color: #482666;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Centering the button */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu ul li button:hover {
+    background-color: #482666;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-menu ul li button:focus {
+    outline: none; /* Remove default outline */
+    background-color: #482666; /* Background color on focus */
+}
+
+/* Main content area */
+main {
+    min-height: calc(100vh - 100px); /* Adjust based on header and footer height */
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Post container styles */
+#posts {
+    max-width: 800px; /* Set a maximum width for the posts container */
+    width: 100%; /* Ensure it takes full width within max-width */
+    margin: 0 auto; /* Center container horizontally */
+}
+
+/* Post styles */
+.post {
+    background-color: #482666; /* Light background for posts */
+    border-radius: 10px; /* More rounded corners for posts */
+    padding: 20px; /* Padding inside each post */
+    margin-bottom: 20px; /* Space between posts */
+    box-shadow: 0px 6px 12px #000000; /* Subtle shadow for posts */
+}
+
+.post h2 {
+    font-size: 26px; /* Slightly larger font size for post titles */
+    margin-top: 0; /* Remove top margin for the title */
+}
+
+.post p {
+    margin: 12px 0;
+    color: #ffffff; /* Vertical margin for paragraphs */
+}
+
+.post a {
+    color: #ffffff; /* Color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.post a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+footer {
+    background-color: #482666; /* Slightly lighter color */
+    color: #ffffff;
+    padding: 20px 0; /* Increased padding */
+    text-align: center;
+    flex-shrink: 0; /* Footer does not take space when scrolling */
+    width: 100%;
+}
+a i {
+    color: white; /* Set warna ikon menjadi putih */
+    font-size: 20px; /* Atur ukuran ikon sesuai kebutuhan */
+    transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+a i:hover {
+    color: #f0f0f0; /* Warna ikon saat hover */
+}
+
+/* Card styles */
+.card {
+    background-color: #482666; /* Slightly lighter color */
+    color: #ffffff;
+    width: 350px; /* Adjust width */
+    border-radius: 10px; /* More rounded corners for card */
+    overflow: hidden;
+    box-shadow: 0 4px 8px  #000000; /* Subtle shadow */
+    margin: 20px auto; /* Center card horizontally */
+    padding: 15px; /* Padding inside card */
+    text-align: center;
+}
+
+.card-header {
+    border-bottom: 1px solid #ccc; /* Add border at the bottom of the header */
+    padding-bottom: 10px; /* Padding below the header content */
+}
+
+.card-header .user-info {
+    margin-bottom: 15px; /* Space below the user info */
+}
+
+.card-header h3 {
+    margin: 0; /* Remove margin for the heading */
+}
+
+.card-header p {
+    margin: 0; /* Remove margin for the paragraph */
+    color: #cccccc; /* Light color for the date/time */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    text-align: justify;
+}
+
+.card-body i {
+    font-size: 36px; /* Menyesuaikan ukuran ikon */
+    color: #ffffff;
+    margin: 10px 0; /* Mengurangi jarak antara ikon dan teks */
+}
+
+
+.card-footer {
+    padding: 10px 0; /* Padding inside footer */
+    text-align: center;
+}
+
+.card-footer h3 {
+    font-size: 20px; /* Font size for footer heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.card-footer p {
+    font-size: 16px; /* Font size for footer text */
+    margin-bottom: 15px; /* Space below text */
+}
+
+.card-footer button {
+    background-color: #482666; /* Background color */
+    color: #ffffff; /* Text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside button */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effects */
+     box-shadow: 0px 4px 8px  #000000; /* Shadow effect on hover */
+}
+
+.card-footer button:hover {
+    background-color: #6e3d8f; /* Change color on hover */
+    box-shadow: 0px 4px 8px  #000000; /* Shadow effect on hover */
+}
+
+.card-footer button:focus {
+    outline: none; /* Remove default outline */
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 70px; /* Add padding at the top to create space */
+  }
+  
+  @media (max-width: 768px) {
+.slideshow-container {
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+    padding-top: 35px; /* Add padding at the top to create space */
+  }
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #ffffff;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #000000;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.view-all-posts {
+    text-align: center; /* Memastikan teks berada di tengah */
+    margin: 20px 0; /* Menambahkan margin vertikal agar lebih proporsional */
+}
+
+.view-all-posts a {
+    color: #ffffff; /* Warna teks putih */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    font-size: 18px; /* Ukuran font yang sesuai */
+    font-weight: bold; /* Memberi kesan tebal pada teks */
+}
+
+.view-all-posts a:hover {
+    text-decoration: underline; /* Memberi garis bawah saat hover */
+}
+
+/* Gaya khusus untuk kontainer FAQ */
+.faq-container {
+    width: 100%;
+    max-width: 800px; /* Lebar maksimum kotak FAQ */
+    margin: 20px auto; /* Jarak dari elemen lain di atas dan bawah kotak FAQ */
+    padding: 20px; /* Spasi di dalam kotak FAQ */
+    background-color: #482666; /* Warna latar belakang kotak FAQ */
+    border-radius: 8px; /* Sudut melengkung pada kotak FAQ */
+    box-shadow: 0px 4px 8px #000000; /* Bayangan lembut di bawah kotak FAQ */
+    box-sizing: border-box; /* Sertakan padding dan border dalam lebar total elemen */
+}
+
+/* Judul FAQ */
+.faq-container h2 {
+    font-size: 24px; /* Ukuran font untuk judul FAQ */
+    font-weight: bold; /* Tebal font untuk judul FAQ */
+    margin-bottom: 20px; /* Spasi di bawah judul FAQ */
+    text-align: center; /* Pusatkan teks judul FAQ */
+    color: #ffffff; /* Warna teks judul FAQ agar kontras dengan latar belakang */
+}
+
+/* Item FAQ */
+.faq-item {
+    border-radius: 8px; /* Sudut melengkung pada item FAQ */
+    background-color: #482666; /* Warna latar belakang untuk item FAQ */
+    margin-bottom: 15px; /* Jarak antar item FAQ */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut di bawah item FAQ */
+    overflow: hidden; /* Pastikan konten tidak melampaui batas sudut melengkung */
+    position: relative; /* Posisi relatif untuk tombol toggle */
+}
+
+/* Tombol Pertanyaan FAQ */
+.faq-question {
+    background-color: #482666; /* Warna latar belakang tombol pertanyaan */
+    color: #ffffff; /* Warna teks pertanyaan */
+    width: 100%;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 18px; /* Ukuran font yang lebih besar untuk pertanyaan */
+    border-bottom: 1px solid #ddd; /* Garis bawah pada tombol pertanyaan */
+    position: relative; /* Untuk positioning tombol toggle */
+    transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna latar belakang */
+}
+
+/* Tombol Toggle (tutup jawaban) */
+.toggle-btn {
+    position: absolute; /* Posisi absolut untuk tombol toggle */
+    right: 15px; /* Jarak dari tepi kanan */
+    top: 50%; /* Pusatkan secara vertikal */
+    transform: translateY(-50%); /* Pusatkan secara vertikal */
+    background: #482666; /* Latar belakang tombol */
+    color: #ffffff; /* Warna teks tombol */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px; /* Sudut melengkung pada tombol */
+    font-size: 14px; /* Ukuran font pada tombol */
+    transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna latar belakang */
+}
+
+/* Jawaban FAQ */
+.faq-answer {
+    padding: 0 15px; /* Padding di kiri dan kanan */
+    max-height: 0; /* Mulai dengan tinggi 0 */
+    overflow: hidden; /* Sembunyikan konten yang melebihi batas */
+    font-size: 16px; /* Ukuran font untuk jawaban */
+    color: #000000; /* Warna teks jawaban */
+    background-color: #ffffff; /* Warna latar belakang jawaban */
+    transition: max-height 0.5s ease, padding 0.5s ease; /* Transisi untuk efek animasi */
+}
+
+/* Animasi saat jawaban ditampilkan */
+.faq-answer.show {
+    max-height: 500px; /* Setel tinggi maksimum yang sesuai dengan konten */
+    padding: 15px; /* Pastikan padding sama saat ditampilkan */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 16px; /* Ukuran font yang lebih kecil untuk layar kecil */
+    }
+
+    .faq-answer {
+        font-size: 14px; /* Ukuran font yang lebih kecil untuk layar kecil */
+    }
+}

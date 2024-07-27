@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+</head>
+<body>
+    <header>
+        <div class="logo">HelgaGraphiCode</div>
+        <div class="menu-icon" id="menu-icon" onclick="toggleNav()">☰</div>
+        <nav id="nav-menu" class="nav-menu">
+            <div class="close-icon" onclick="toggleNav()">×</div>
+            <ul>
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="blog.html">BLOG</a></li>
+              <li><a href="account.html">ACCOUNT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+<p>masih tahap pengembangan ...</p>
+    </main>
+
+    <footer>
+        &copy; 2024 HelgaGraphiCode. support@helga
+    </footer>
+    <!-- Include your admin.js script -->
+    <script type="module" src="index.js"></script>
+    <script>
+        // Definisikan fungsi toggleNav dalam global scope
+    window.toggleNav = function() {
+        var navMenu = document.getElementById('nav-menu');
+        var menuIcon = document.getElementById('menu-icon');
+        if (navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+          menuIcon.style.display = 'block';
+        } else {
+          navMenu.classList.add('show');
+          menuIcon.style.display = 'none';
+        }
+      }
+      
+      </script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+/* CSS untuk menghilangkan garis bawah pada judul post */
+.post h2 a {
+    text-decoration: none;
+    color: inherit; /* Menggunakan warna default teks */
+}
+
+.post h2 a:hover {
+    text-decoration: underline; /* Garis bawah muncul saat hover (opsional) */
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(8px); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #482666; /* Slightly lighter color */
+    color: white;
+    height: 70px; /* Adjusted height */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.logo {
+    font-weight: bold; /* Make the logo text bold */
+    font-size: 36px; /* Default size for desktop */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 20px; /* Size for mobile devices */
+    }
+}
+
+.menu-icon {
+    font-size: 1.8em;
+    color: #fff; /* Color for menu icon */
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px; /* Adjusted width */
+    background-color: #482666;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px; /* Adjusted padding */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-menu.show {
+    transform: translateX(0);
+}
+
+.close-icon {
+    font-size: 2.2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-menu ul li {
+    margin: 15px 0;
+    width: 100%; /* Ensure full width for centering */
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    display: block; /* Make links block level for full width */
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #482666; /* Hover effect for links */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.nav-menu ul li button {
+    width: 80%;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px;
+    background-color: #482666;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Centering the button */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu ul li button:hover {
+    background-color: #482666;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-menu ul li button:focus {
+    outline: none; /* Remove default outline */
+    background-color: #482666; /* Background color on focus */
+}
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#posts {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.post h2 {
+    margin-top: 0;
+    text-align: justify;
+}
+
+.post p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+footer {
+    background-color: #482666;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    flex-shrink: 0; /* Footer tidak mengambil ruang saat scroll */
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #482666;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#post-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#post-form input[type="text"],
+#post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#post-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#post-form button {
+    background-color: #482666;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#post-form button:hover {
+    background-color: #5c378e;
+}
+
+#posts {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Styling untuk pagination */
+.pagination {
+    display: flex;
+    justify-content: center; /* Menyelaraskan tombol ke tengah */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #6c1d8f; /* Warna ungu gelap */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px; /* Jarak antara tombol */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #5c1b7f; /* Warna ungu lebih gelap saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.pagination button:disabled {
+    background-color: #d3a9e2; /* Warna ungu pucat untuk tombol dinonaktifkan */
+    cursor: not-allowed;
+}
+
+/* Styles for the form and its elements */
+#post-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#post-form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#post-form select,
+#post-form input[type="text"],
+#post-form input[type="password"],
+#post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#post-form select:focus,
+#post-form input[type="text"]:focus,
+#post-form input[type="password"]:focus,
+#post-form textarea:focus {
+    border-color: #482666; /* Focus border color */
+    outline: none;
+    box-shadow: 0 0 4px rgba(72, 38, 102, 0.2); /* Focus shadow */
+}
+
+#post-form textarea {
+    height: 150px; /* Set a height for textarea */
+    resize: vertical; /* Allow vertical resize only */
+}
+
+/* Styles for the submit button */
+#post-form button {
+    background-color: #482666; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#post-form button:hover {
+    background-color: #3c1f5c; /* Darker shade of purple for hover */
+}
+
+#post-form button:active {
+    background-color: #3c1f5c; /* Same as hover for active */
+    transform: scale(0.98); /* Slightly scale down on click */
+}
